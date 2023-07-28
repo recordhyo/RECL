@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".classTimetable">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/colorPrimaryDark"
+        android:orientation="vertical"></LinearLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|center"
+        android:layout_marginTop="110dp"
+        android:text="강의실 별 시간표"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="35dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="180dp"
+        android:text="1층"
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent"
+        android:textSize="25dp"
+        android:textStyle="bold" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button113"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="230dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="113"
+        android:textColor="@color/white"
+        android:textSize="20dp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button116"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="230dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="116"
+        android:textColor="@color/white"
+        android:textSize="20dp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button117"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="270dp"
+        android:layout_marginTop="230dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="117"
+        android:textColor="@color/white"
+        android:textSize="20dp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button118"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="300dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="118"
+        android:textColor="@color/white"
+        android:textSize="20dp" />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button119"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="300dp"
+        android:layout_marginLeft="150dp"
+        android:text="119"
+        android:textSize="20dp"
+        android:textColor="@color/white"
+        android:background="@color/colorPrimaryDark"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="400dp"
+        android:text="2층"
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent"
+        android:textSize="25dp"
+        android:textStyle="bold" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button217"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="450dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="217"
+        android:textColor="@color/white"
+        android:textSize="20dp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button218"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="450dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="218"
+        android:textColor="@color/white"
+        android:textSize="20dp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button220"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="270dp"
+        android:layout_marginTop="450dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="220"
+        android:textColor="@color/white"
+        android:textSize="20dp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button221"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="520dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="221"
+        android:textColor="@color/white"
+        android:textSize="20dp" />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button222"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="520dp"
+        android:layout_marginLeft="150dp"
+        android:text="222"
+        android:textSize="20dp"
+        android:textColor="@color/white"
+        android:background="@color/colorPrimaryDark"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonMypage"
+        android:layout_width="120dp"
+        android:layout_height="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="630dp"
+        android:background="@color/gray"
+        android:text="마이페이지"
+        android:textColor="@color/white"
+        android:textSize="20dp" />
+
+</RelativeLayout>

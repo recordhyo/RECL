@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.RECL"
+        tools:targetApi="31">
+        <activity
+            android:name=".mainButton"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".classTimetable"
+            android:exported="true" />
+        <activity
+            android:name=".classnono"
+            android:exported="true" />
+
+        <activity
+            android:name=".CompleteActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" />
+        <!--<activity
+            android:name=".mainButton"
+            android:exported="true" />-->
+
+        <activity
+            android:name=".MyItem"
+            android:exported="true" />
+
+        <activity
+            android:name=".Mypage"
+            android:exported="true" />
+
+        <activity
+            android:name=".Myreserve"
+            android:exported="true" />
+        <activity
+            android:name=".noclass2"
+            android:exported="true" />
+
+        <activity
+            android:name=".classButton"
+            android:exported="true" />
+        <activity
+            android:name=".Register"
+            android:exported="true" />
+
+        <activity
+            android:name=".selectDay"
+            android:exported="true" />
+
+        <activity
+            android:name=".TimeTable"
+            android:exported="true" />
+
+        <activity
+            android:name=".User"
+            android:exported="true" />
+
+
+    </application>
+
+</manifest>
