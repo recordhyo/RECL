@@ -3,6 +3,8 @@ package com.example.recl;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
+
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -26,14 +28,16 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-
     private static  final String TAG = "MainActivity";
-
+    int hour, mhour, minute, minute_sum, day;
+    LocalDateTime now = LocalDateTime.now();
     private FirebaseAuth firebaseAuth;
     private FirebaseUser currentUser;
 
@@ -43,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
     String KEY200 = "";
     String KEY300 = "";
     String subject="";
-    //long bools;
+    ArrayList<String> classlist = new ArrayList<>(List.of("113","116","117","118","119","217","218","220","221","222"));
 
     FirebaseDatabase mDatabase = FirebaseDatabase.getInstance();
     DatabaseReference databaseRef = mDatabase.getReference();
@@ -64,67 +68,82 @@ public class MainActivity extends AppCompatActivity {
         Intent comingintent = getIntent();
 
         final String class_num = comingintent.getStringExtra("classnum");
+        final String yoil = comingintent.getStringExtra("yoil");
         classnum.setText(class_num);
 
-        //items1.addItem("good1","good2");
 
         listView.setAdapter(items1);
         // readUsers();
 
-        databaseRef.addValueEventListener(new ValueEventListener() {
+        for(String classnum : classlist) {
+            items1.clearItem();
+            databaseRef.child(classnum).addValueEventListener(new ValueEventListener() {
+                String key3_twin = "";
 
-            String key3_twin="";
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    for (DataSnapshot daySnapshot : snapshot.getChildren()) {
+                        String key2 = daySnapshot.getKey(); // 무슨 요일인지
+                        for (DataSnapshot numSnapshot : daySnapshot.getChildren()) {
+                            String key3 = numSnapshot.getKey(); // 몇교시인지
+                            if (classnum.equals(class_num)) {
+                                if (key2.equals(yoil)) {
+                                    String bools = numSnapshot.child("bool").getValue(String.class);
+                                    String okay = "";
+                                    if (bools.equals("0")) {
+                                        key3_twin = key3;
+                                        okay = "신청 가능";
+                                        KEY100 = classnum;
+                                        KEY200 = key2;
+                                    } else {
+                                        key3_twin = key3;
+                                        okay = "신청 불가";
+                                    }
+                                    items1.addItem(key3, okay);
+                                }
+                            }
+                        }
+                        items1.notifyDataSetChanged();
+                    }
+                }
+                    @Override
+                    public void onCancelled (@NonNull DatabaseError error){
+                        Log.w("TAG: ", "Failed to read value", error.toException());
+                    }
+            });
+        }
 
+/*                    String key3_twin = "";
 
             @Override
-
             public void onDataChange(DataSnapshot dataSnapshot) {
-
-
                 items1.clearItem();
-
                 for(DataSnapshot classSnapshot : dataSnapshot.getChildren()){
                     String key1 = classSnapshot.getKey(); //몇 호인지
-                    //Log.i("TAG: value is ", String.valueOf(key1));
-
                     for(DataSnapshot daySnapshot : classSnapshot.getChildren()){
-
                         String key2 = daySnapshot.getKey(); // 무슨 요일인지
-                        // Log.i("TAG: value is ", String.valueOf(key2));
-
                         for(DataSnapshot numSnapshot : daySnapshot.getChildren()) {
                             String key3 = numSnapshot.getKey(); // 몇교시인지
-                            //Log.i("TAG: value is ", String.valueOf(key3));
-
-                            if(key1.equals(class_num)){
-                                // mysnapshot = numSnapshot;
-                                //MyItem myItem = numSnapshot.getValue(MyItem.class);
-                                String bools = numSnapshot.child("bool").getValue(String.class);
-                                String okay = "";
-                                // subject = numSnapshot.child("sub").getValue(String.class);
-
-                                if (bools.equals("0")) {
-
+                            if(key1.equals(class_num)) {
+                                if (key2.equals(yoil)) {
+                                    String bools = numSnapshot.child("bool").getValue(String.class);
+                                    String okay = "";
                                     key3_twin = key3;
-                                    okay = "신청 가능";
-                                    KEY100 = key1;
-                                    KEY200 = key2;
-                                    // KEY300 = key3;
-
-                                    //items1.addItem(key3, "신청 가능");
-                                } else{
-                                    key3_twin = key3;
-                                    okay ="신청 불가" ;
+                                    if (bools == "0") {
+                                        okay = "신청 가능";
+                                        KEY100 = key1;
+                                        KEY200 = key2;
+                                    } else {
+                                        okay = "신청 불가";
+                                    }
+                                    items1.addItem(key3, okay);
                                 }
-                                items1.addItem(key3,okay);
-                                //items1.addItem(key3, "신청 불가");
                             }
+
                         }
                     }
                 }
-
                 items1.notifyDataSetChanged();
-                //istView.setSelection(items1.getCount() - 1);
             }
 
             @Override
@@ -132,34 +151,8 @@ public class MainActivity extends AppCompatActivity {
                 Log.w("TAG: ", "Failed to read value", databaseError.toException());
             }
         });
-
+*/
     }
-   /* public void readUsers() {
-
-        DatabaseReference newreference = FirebaseDatabase.getInstance().getReference("User");
-
-        newreference.addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
-                    String key = snapshot.getKey();
-                    if (key.equals(currentUser.getUid())){
-                        User value = snapshot.getValue(User.class);
-                        recl_name = value.username;
-
-                        break;
-                    }
-                }
-            }
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-
-                Log.w("TAG: ", "Failed to read value", databaseError.toException());
-
-            }
-        });
-
-    }*/
 
 
     private class MyAdapter extends BaseAdapter {
@@ -171,6 +164,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public int getCount() {
+            System.out.println(mItems.size());
             return mItems.size();
         }
 
@@ -209,7 +203,6 @@ public class MainActivity extends AppCompatActivity {
                     holder.radioButton.setChecked(false);
                 }
             }
-
 
             //RadioGroup rbutton = (RadioGroup) v.findViewById(R.id.radiobutton1);
 

@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CalendarView;
 import androidx.appcompat.app.AppCompatActivity;
+import java.util.Calendar;
 
 public class selectDay extends AppCompatActivity {
     Button buttonMypage;
@@ -24,6 +25,9 @@ public class selectDay extends AppCompatActivity {
                 intent.putExtra("intyear", Integer.toString(year));
                 intent.putExtra("intmonth", Integer.toString(month));
                 intent.putExtra("intday", Integer.toString(dayOfMonth));
+                Calendar calendar = Calendar.getInstance();
+                int dayOfWeek = calendar.get(Calendar.DAY_OF_WEEK);
+                intent.putExtra("intyoil", dayOfWeek);
                 startActivity(intent);
             }
         });

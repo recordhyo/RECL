@@ -31,6 +31,7 @@ public class classButton extends AppCompatActivity {
         String month = intent.getStringExtra("intmonth");
         String day = intent.getStringExtra("intday");
         String dayresult = year + "년 "+month+"월 "+day +"일";
+        int dayOfWeek = intent.getIntExtra("intyoil",1);
         TextView dateview = (TextView) findViewById(R.id.dateview);
         dateview.setText(dayresult);
 
@@ -52,6 +53,7 @@ public class classButton extends AppCompatActivity {
                 Intent intent = new Intent(classButton.this, MainActivity.class);
                 intent.putExtra("classnum", "113");
                 intent.putExtra("completedate", dayresult);
+                intent.putExtra("yoil", setyoil(dayOfWeek));
                 startActivity(intent);
             }
         });
@@ -62,6 +64,7 @@ public class classButton extends AppCompatActivity {
                 Intent intent = new Intent(classButton.this, MainActivity.class);
                 intent.putExtra("classnum", "116");
                 intent.putExtra("completedate", dayresult);
+                intent.putExtra("yoil", setyoil(dayOfWeek));
                 startActivity(intent);
             }
         });
@@ -72,6 +75,7 @@ public class classButton extends AppCompatActivity {
                 Intent intent = new Intent(classButton.this, MainActivity.class);
                 intent.putExtra("classnum", "117");
                 intent.putExtra("completedate", dayresult);
+                intent.putExtra("yoil", setyoil(dayOfWeek));
                 startActivity(intent);
             }
         });
@@ -82,6 +86,7 @@ public class classButton extends AppCompatActivity {
                 Intent intent = new Intent(classButton.this, MainActivity.class);
                 intent.putExtra("classnum", "118");
                 intent.putExtra("completedate", dayresult);
+                intent.putExtra("yoil", setyoil(dayOfWeek));
                 startActivity(intent);
             }
         });
@@ -92,6 +97,7 @@ public class classButton extends AppCompatActivity {
                 Intent intent = new Intent(classButton.this, MainActivity.class);
                 intent.putExtra("classnum", "119");
                 intent.putExtra("completedate", dayresult);
+                intent.putExtra("yoil", setyoil(dayOfWeek));
                 startActivity(intent);
             }
         });
@@ -102,6 +108,7 @@ public class classButton extends AppCompatActivity {
                 Intent intent = new Intent(classButton.this, MainActivity.class);
                 intent.putExtra("classnum", "217");
                 intent.putExtra("completedate", dayresult);
+                intent.putExtra("yoil", setyoil(dayOfWeek));
                 startActivity(intent);
             }
         });
@@ -112,6 +119,7 @@ public class classButton extends AppCompatActivity {
                 Intent intent = new Intent(classButton.this, MainActivity.class);
                 intent.putExtra("classnum", "218");
                 intent.putExtra("completedate", dayresult);
+                intent.putExtra("yoil", setyoil(dayOfWeek));
                 startActivity(intent);
             }
         });
@@ -121,6 +129,7 @@ public class classButton extends AppCompatActivity {
                 Intent intent = new Intent(classButton.this, MainActivity.class);
                 intent.putExtra("classnum", "220");
                 intent.putExtra("completedate", dayresult);
+                intent.putExtra("yoil", setyoil(dayOfWeek));
                 startActivity(intent);
             }
         });
@@ -130,6 +139,7 @@ public class classButton extends AppCompatActivity {
                 Intent intent = new Intent(classButton.this, MainActivity.class);
                 intent.putExtra("classnum", "221");
                 intent.putExtra("completedate", dayresult);
+                intent.putExtra("yoil", setyoil(dayOfWeek));
                 startActivity(intent);
             }
         });
@@ -139,6 +149,7 @@ public class classButton extends AppCompatActivity {
                 Intent intent = new Intent(classButton.this, MainActivity.class);
                 intent.putExtra("classnum", "222");
                 intent.putExtra("completedate", dayresult);
+                intent.putExtra("yoil", setyoil(dayOfWeek));
                 startActivity(intent);
             }
         });
@@ -152,6 +163,23 @@ public class classButton extends AppCompatActivity {
         });
 
 
+    }
+
+    public String setyoil(int dayOfWeek) {
+        String day_string = new String();
+
+        if (dayOfWeek ==1)
+            day_string = "MON";
+        else if (dayOfWeek ==2)
+            day_string = "TUE";
+        else if (dayOfWeek ==3)
+            day_string = "WED";
+        else if (dayOfWeek ==4)
+            day_string = "THU";
+        else if (dayOfWeek ==5)
+            day_string = "FRI";
+
+        return day_string;
     }
 }
 
