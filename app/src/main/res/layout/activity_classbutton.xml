@@ -7,31 +7,28 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:background="@color/colorPrimaryDark"
-        android:orientation="vertical"></LinearLayout>
-
+        android:layout_height="150dp"
+        android:background="#0B6138"
+        android:orientation="vertical">
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal|center"
-        android:layout_marginTop="110dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="55dp"
         android:text="강의실 선택"
         android:textAlignment="center"
-        android:textColor="#000000"
-        android:textSize="28dp"
-        android:textStyle="bold" />
+        android:textColor="@color/white"
+        android:textSize="30dp"/> </LinearLayout>
 
     <TextView
         android:id="@+id/dateview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal|center"
-        android:layout_marginTop="160dp"
+        android:layout_marginTop="165dp"
         android:textAlignment="center"
         android:textColor="#000000"
-        android:textSize="15dp"
+        android:textSize="20dp"
         android:textStyle="bold" />
 
     <TextView
@@ -41,7 +38,6 @@
         android:layout_marginTop="200dp"
         android:text="1층"
         android:textAlignment="center"
-        android:textColor="@color/colorAccent"
         android:textSize="25dp"
         android:textStyle="bold" />
 
@@ -52,7 +48,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="250dp"
-        android:background="@color/colorPrimaryDark"
+        android:background="#04B45F"
         android:text="113"
         android:textColor="@color/white"
         android:textSize="20dp" />
@@ -64,7 +60,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginLeft="150dp"
         android:layout_marginTop="250dp"
-        android:background="@color/colorPrimaryDark"
+        android:background="#04B45F"
         android:text="116"
         android:textColor="@color/white"
         android:textSize="20dp" />
@@ -76,7 +72,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginLeft="270dp"
         android:layout_marginTop="250dp"
-        android:background="@color/colorPrimaryDark"
+        android:background="#04B45F"
         android:text="117"
         android:textColor="@color/white"
         android:textSize="20dp" />
@@ -88,7 +84,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="320dp"
-        android:background="@color/colorPrimaryDark"
+        android:background="#04B45F"
         android:text="118"
         android:textColor="@color/white"
         android:textSize="20dp" />
@@ -100,7 +96,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginLeft="150dp"
         android:layout_marginTop="320dp"
-        android:background="@color/colorPrimaryDark"
+        android:background="#04B45F"
         android:text="119"
         android:textColor="@color/white"
         android:textSize="20dp" />
@@ -109,10 +105,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="400dp"
+        android:layout_marginTop="420dp"
         android:text="2층"
         android:textAlignment="center"
-        android:textColor="@color/colorAccent"
         android:textSize="25dp"
         android:textStyle="bold" />
 
@@ -123,8 +118,8 @@
         android:layout_height="50dp"
         android:layout_alignParentTop="true"
         android:layout_marginLeft="30dp"
-        android:layout_marginTop="450dp"
-        android:background="@color/colorPrimaryDark"
+        android:layout_marginTop="470dp"
+        android:background="#04B45F"
         android:text="217"
         android:textColor="@color/white"
         android:textSize="20dp" />
@@ -135,8 +130,8 @@
         android:layout_height="50dp"
         android:layout_alignParentTop="true"
         android:layout_marginLeft="150dp"
-        android:layout_marginTop="450dp"
-        android:background="@color/colorPrimaryDark"
+        android:layout_marginTop="470dp"
+        android:background="#04B45F"
         android:text="218"
         android:textColor="@color/white"
         android:textSize="20dp" />
@@ -147,8 +142,8 @@
         android:layout_height="50dp"
         android:layout_alignParentTop="true"
         android:layout_marginLeft="270dp"
-        android:layout_marginTop="450dp"
-        android:background="@color/colorPrimaryDark"
+        android:layout_marginTop="470dp"
+        android:background="#04B45F"
         android:text="220"
         android:textColor="@color/white"
         android:textSize="20dp" />
@@ -159,8 +154,8 @@
         android:layout_height="50dp"
         android:layout_alignParentTop="true"
         android:layout_marginLeft="30dp"
-        android:layout_marginTop="520dp"
-        android:background="@color/colorPrimaryDark"
+        android:layout_marginTop="540dp"
+        android:background="#04B45F"
         android:text="221"
         android:textColor="@color/white"
         android:textSize="20dp" />
@@ -169,12 +164,12 @@
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="520dp"
+        android:layout_marginTop="540dp"
         android:layout_marginLeft="150dp"
         android:text="222"
         android:textSize="20dp"
         android:textColor="@color/white"
-        android:background="@color/colorPrimaryDark"/>
+        android:background="#04B45F"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/buttonMypage"
@@ -182,10 +177,9 @@
         android:layout_height="30dp"
         android:layout_alignParentTop="true"
         android:layout_centerInParent="true"
-        android:layout_marginTop="630dp"
-        android:background="@color/gray"
+        android:layout_marginTop="650dp"
+        android:background="#E0F8E0"
         android:text="마이페이지"
-        android:textColor="@color/white"
         android:textSize="20dp" />
 
 </RelativeLayout>

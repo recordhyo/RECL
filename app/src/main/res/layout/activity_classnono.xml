@@ -6,21 +6,20 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:background="@color/colorPrimaryDark"
-        android:orientation="vertical"></LinearLayout>
+        android:layout_height="150dp"
+        android:background="#0B6138"
+        android:orientation="vertical">
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="55dp"
+            android:text="빈 강의실 확인"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="30dp"/>
+    </LinearLayout>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal|center"
-        android:layout_marginTop="100dp"
-        android:text="빈 강의실 확인"
-        android:textAlignment="center"
-        android:textColor="#000000"
-        android:textSize="35dp"
-        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/dateNow"
@@ -40,6 +39,7 @@
         android:layout_height="50dp"
         android:layout_marginLeft="320dp"
         android:layout_marginTop="155dp"
+        android:background="#E0F8E0"
         android:text="Re" />
 
     <LinearLayout
@@ -53,7 +53,7 @@
             android:layout_width="match_parent"
             android:layout_height="450dp"
             android:background="@color/white"
-            android:divider="@color/colorAccent"
+            android:divider="#04B45F"
             android:dividerHeight="1dp" />
 
     </LinearLayout>

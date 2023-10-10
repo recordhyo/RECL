@@ -13,7 +13,7 @@
         android:theme="@style/Theme.RECL"
         tools:targetApi="31">
         <activity
-            android:name=".mainButton"
+            android:name=".LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -37,9 +37,9 @@
         <activity
             android:name=".MainActivity"
             android:exported="true" />
-        <!--<activity
+        <activity
             android:name=".mainButton"
-            android:exported="true" />-->
+            android:exported="true" />
 
         <activity
             android:name=".MyItem"
