@@ -47,9 +47,30 @@
 ✔ 로그인 페이지
 + 첫 화면
 + 가입되지 않은 아이디로 로그인 시도할 때 ""
-+ 아이디와 비밀번호 일치하지 않을 때 ""
++ 아이디와 비밀번호 일치하지 않을 때 "ID와 비밀번호를 다시 확인해주세요"
 + 
 
+
+## DB 설계
+<img width="70%" src="https://github-production-user-asset-6210df.s3.amazonaws.com/126046238/281644476-9f405095-0c92-45bd-8628-36eb4e858d91.png"/>
+
+</br></br></br>
+## 흐름도
+</br></br></br>
+
+
+
+## 실행결과
+
+#### 실행영상 
+</br>
+
+**강의실 예약 신청 및 신청 취소**
+<img width="80%" src="https://github.com/recordhyo/RECL/assets/126046238/055e7c90-f2a8-49ad-8b21-000a34cf201c"/>
+
+</br></br></br>
+
+## 회고
 
 
 
