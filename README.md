@@ -4,13 +4,13 @@
 </br></br></br>
 
 ### 순서
-1. 개요
-2. 사용된 기술
-3. 요구사항 분석
-4. DB 설계
-5. 흐름도
-7. 실행결과
-8. 회고
+[1. 개요](#개요) <br/>
+[2. 사용된 기술](#사용된-기술) <br/>
+[3. 요구사항 분석](#요구사항-분석) <br/>
+[4. DB 설계](#db-설계) <br/>
+[5. 흐름도](#흐름도) <br/>
+[6. 실행결과](#실행결과) <br/>
+[7. 회고](#회고)
 
 </br>
 
@@ -79,10 +79,11 @@
 
 
 ## DB 설계
-<img width="60%" src="https://github-production-user-asset-6210df.s3.amazonaws.com/126046238/281644476-9f405095-0c92-45bd-8628-36eb4e858d91.png"/>
+<img width="80%" src="https://github-production-user-asset-6210df.s3.amazonaws.com/126046238/281644476-9f405095-0c92-45bd-8628-36eb4e858d91.png"/>
 
 </br></br></br>
 ## 흐름도
+<img width="80%" src="https://github.com/recordhyo/RECL/assets/126046238/402b18da-9eb7-4e25-8de3-799fc7b63cae"/>
 </br></br></br>
 
 
@@ -145,6 +146,8 @@
 </br></br></br>
 
 ## 회고
++ 웹과 다르게 프론트엔드(UI)를 함께 개발해서 어려운 점이 있었다.
++ Java 말고 코틀린이나 플러터를 배워서 개발해보고 싶다는 생각을 했다.
 
 
 
