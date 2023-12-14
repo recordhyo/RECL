@@ -1,6 +1,7 @@
 # RECL
 #### 전남대학교 공과대학 7호관 강의실 대여 시스템 
 
+[졸업논문보러가기](https://drive.google.com/file/d/1x6ExUBlJUUcP670fU5aaz0bDT4qnO-Lv/view?usp=sharing)
 </br></br></br>
 
 ### 순서
